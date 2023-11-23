@@ -8,7 +8,7 @@ public class Main {
             sum=0;
             for (int j=0;j<4;j++){
                 arr[i][j]=sc.nextInt();
-                sum+=arr[i][j]
+                sum+=arr[i][j];
             }
             System.out.println(sum);
         }
