@@ -4,15 +4,20 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
-        int [] arr = sc.nextLine().split(" ");
-        Arrays.sort(arr);
+        String [] arr = sc.nextLine().split(" ");
+        int [] arr1 = new int[arr.length];
         for (int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+            arr1[i]=Integer.parseInt(arr[i]);
         }
-        Arrays.sort(arr,Collections.reverseOrder());
-        System.out.println();
+        Arrays.sort(arr1);
         for (int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+            System.out.print(arr1[i]+" ");
+        }
+        Integer[] arr2 = Arrays.stream(arr1).boxed().toArray(Integer[]::new);
+        Arrays.sort(arr2, Collections.reverseOrder());
+        System.out.println();
+        for (int i=0;i<arr2.length;i++){
+            System.out.print(arr2[i]+" ");
         }
 
     }
