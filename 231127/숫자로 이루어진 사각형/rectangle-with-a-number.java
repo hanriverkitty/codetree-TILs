@@ -6,16 +6,18 @@ public class Main {
         
             for (int j=0;j<n;j++){
                 if (cnt==9){
-                    cnt=1
+                    cnt=1;
                 }
                 System.out.print(cnt+" ");
+                cnt++;
             }
             System.out.println();
         }
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        printNum(sc);
+        int num = sc.nextInt();
+        printNum(num);
     }
     
 }
