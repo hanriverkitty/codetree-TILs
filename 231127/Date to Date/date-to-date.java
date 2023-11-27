@@ -13,14 +13,14 @@ public class Main {
             System.out.println("1");
             return;
         }
-        for (int i=0;i<m2 -1;i++){
-            if (i<m1-1){
+        for (int i=0;i<m2;i++){
+            if (i<m1){
                 sum1+=arr[i];
             }
             sum2+=arr[i];
         }
         sum1+=d1;
         sum2+=d2;
-        System.out.println(sum2-sum1);
+        System.out.println(sum2-sum1+1);
     }
 }
