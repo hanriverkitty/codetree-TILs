@@ -9,6 +9,10 @@ public class Main {
         int d2 = sc.nextInt();
         int sum1=0;
         int sum2=0;
+        if (m1==m2 && d1==d2){
+            System.out.println("1");
+            return;
+        }
         for (int i=0;i<m2;i++){
             if (i<m1){
                 sum1+=arr[i];
