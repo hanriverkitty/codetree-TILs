@@ -13,8 +13,8 @@ public class Main {
             System.out.println("1");
             return;
         }
-        for (int i=0;i<m2;i++){
-            if (i<m1){
+        for (int i=0;i<m2 -1;i++){
+            if (i<m1-1){
                 sum1+=arr[i];
             }
             sum2+=arr[i];
