@@ -8,7 +8,8 @@ public class Main {
         for(int i=0;i<n;i++){
             sum+=sc.nextDouble();
         }
-        System.out.println(sum);
+        sum/=(double)n;
+        System.out.println(String.format("%.1f",sum));
         if(sum>=4.0){
             System.out.println("Perfect");
         }else if(sum>=3.0){
