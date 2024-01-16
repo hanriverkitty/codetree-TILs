@@ -21,6 +21,10 @@ public class Main {
             if (arr1[i]==arr2[0]){
                 int cnt=0;
                 for (int j=1;j<n2;j++){
+                    if (i+j>n1){
+                        System.out.println("No");
+                        return;
+                    }
                     if(arr1[i+j]!=arr2[j]){
                         break;
                     }
