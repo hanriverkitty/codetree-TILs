@@ -28,7 +28,7 @@ public class Main {
                         cnt++;
                     }
             }
-            if(cnt==n2){
+            if(cnt==n2-1){
                 System.out.println("Yes");
                 return;
             }
