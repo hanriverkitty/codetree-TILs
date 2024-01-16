@@ -20,7 +20,7 @@ public class Main {
         for (int i=0;i<n1;i++){
             if (arr1[i]==arr2[0]){
                 int cnt=0;
-                if (i+n2>=n1){
+                if (i+n2>n1){
                         System.out.println("No");
                         return;
                     }
