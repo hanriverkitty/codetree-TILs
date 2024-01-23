@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String[] arr = sc.nextLine().split(" ");
         for(int i=0;i<10;i++){
-            System.out.println(arr[i])
+            System.out.println(arr[i]);
         }
 
     }
