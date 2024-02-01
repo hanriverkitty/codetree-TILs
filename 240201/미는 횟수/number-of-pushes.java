@@ -6,7 +6,7 @@ public class Main {
         String str2 = sc.next();
         int cnt=0;
         for(int i=0;i<str1.length();i++){
-            str1 = str1.substring(1)+str1.substring(0,1);
+            str1 = str1.substring(str1.length()-1)+str1.substring(0,str1.length()-1);
             cnt++;
             if(str1.equals(str2)){
                 System.out.print(cnt);
