@@ -11,8 +11,9 @@ public class Main {
             if (arr[i]==k){
                 arr[i]=l;
             }
-            System.out.print(arr[i]);
+            
         }
-        
+        String s = String.join(arr);
+        System.out.println(s);
     }
 }
