@@ -8,6 +8,6 @@ public class Main {
             arr[i]=sc.nextInt();
         }
         Arrays.sort(arr);
-        System.out.println(arr[0]+" "+arr[1]+" "+arr[6]-arr[0]-arr[1]);
+        System.out.println(arr[0]+" "+arr[1]+" "+(arr[6]-arr[0]-arr[1]));
     }
 }
