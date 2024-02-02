@@ -11,7 +11,7 @@ class Student implements Comparable<Student>{
     @Override
     public int compareTo(Student a){
         if(a.h==this.h){
-               return this.w-a.w;
+               return a.w-this.w;
             }else{
                return this.h-a.h;
             }
