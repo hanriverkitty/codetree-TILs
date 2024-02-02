@@ -11,7 +11,7 @@ public class Main {
         Arrays.sort(arr);
         int[] arr1 = Arrays.copyOfRange(arr,0,n);
         int[] arr2 = Arrays.copyOfRange(arr,n,arr.length);
-        int max = 9999999;
+        int max = 1000000000;
         for (int i=0;i<arr1.length;i++){
             max = Math.min(max,arr2[i]-arr1[i]);
             
