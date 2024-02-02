@@ -6,21 +6,26 @@ public class Main {
         int[][] arr = new int[n][2];
         int min = 99999;
         int max = 0;
-        int min_idx=0;
-        int max_idx=0;
-        int min_len=0;
-        int max_len=0;
+        int a=0;
+        int b=0;
+        
 
         for(int i=0;i<n;i++){
             arr[i][0]=sc.nextInt();
             arr[i][1]=sc.nextInt();
         }
-        Arrays.sort(arr,(a,b)->a[1]-b[1]);
-        System.out.println(Arrays.deepToString(arr));
+        Arrays.sort(arr,(k,l)->k[1]-l[1]);
+
         for(int i=0;i<n;i++){
             min = Math.min(min,arr[i][0]);
-            min_idx=i;
         }
-        System.out.println(Math.min(arr[n-1][1]-arr[min_idx][0]-(arr[min_idx][1]-arr[min_idx][0]),arr[n-1][1]-arr[min_idx][0]-(arr[n-1][1]-arr[n-1][0])));
+        a = (arr[n-2][1]-min);
+        Arrays.sort(arr,(k,l)->k[0]-l[0]);
+
+        for(int i=0;i<n;i++){
+            max = Math.max(max,arr[i][1]);
+        }
+        b = (max-arr[1][0]);
+        System.out.print(Math.min(a,b));
     }
 }
