@@ -29,9 +29,10 @@ public class Main {
                 System.out.println(cnt);
                 break;
             }
-            arr[max_idx]-=1;
-            arr[min_idx]+=1;
-            cnt++;
+            
+            arr[max_idx]-=(int)(max-min)/2;
+            arr[min_idx]+=(int)(max-min)/2;
+            cnt+=(int)(max-min)/2;
             
         }
     }
