@@ -1,5 +1,5 @@
 import java.util.*;
-public class Student implements Comparable<Student>{
+class Student implements Comparable<Student>{
     int h;
     int w;
     int num;
