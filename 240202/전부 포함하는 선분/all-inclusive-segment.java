@@ -17,10 +17,10 @@ public class Main {
         }
         Arrays.sort(arr,(a,b)->a[0]-b[0]);
        if(arr[0][1]-arr[0][0]>arr[n-1][1]-arr[n-1][0]){
-        System.out.println(arr[n-1][1]-arr[1][0]+1);
+        System.out.println(arr[n-1][1]-arr[1][0]);
        }
        else if(arr[0][1]-arr[0][0]<arr[n-1][1]-arr[n-1][0]){
-        System.out.println(arr[n-2][1]-arr[0][0]+1);
+        System.out.println(arr[n-2][1]-arr[0][0]);
        }
     }
 }
