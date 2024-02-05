@@ -12,7 +12,8 @@ public class Main {
         int day = 0;
         List<String> arr1 = new ArrayList<>(Arrays.asList("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"));
         int count = arr1.indexOf(date);
-        d1 = count;
+        
+        d1 += count;
         List<Integer> arr = new ArrayList<>(Arrays.asList(1,3,5,7,8,10,12));
             while(true){
 
