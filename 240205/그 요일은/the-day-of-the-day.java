@@ -98,7 +98,7 @@ public class Main {
         int k = numOfDay(A);
         int ans = (int)(endDate-startDate)/7;
         int rest = (int)(endDate-startDate)%7;
-        if(rest+k>=7){
+        if(rest>=k){
             ans++;
         }
         System.out.println(ans);
