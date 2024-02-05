@@ -8,16 +8,17 @@ public class Main {
         int m2 = sc.nextInt();
         int d2 = sc.nextInt();
         String date = sc.next();
-        int ans = 1;
+        int ans = 0;
         int day = 0;
         List<String> arr1 = new ArrayList<>(Arrays.asList("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"));
         int count = arr1.indexOf(date);
-        
-        d1 += count;
         List<Integer> arr = new ArrayList<>(Arrays.asList(1,3,5,7,8,10,12));
             while(true){
-
                 if(m1==m2 && d1==d2){
+                    
+                    if (day>=count){
+                        ans++;
+                    }
                     System.out.println(ans);
                     return;
                 }
