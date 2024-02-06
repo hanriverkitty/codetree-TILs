@@ -19,7 +19,7 @@ public class Main {
                 int temp = game[arr[j][0]-1];
                 game[arr[j][0]-1]=game[arr[j][1]-1];
                 game[arr[j][1]-1]=temp;
-                if(game[arr[j][2]]==1){
+                if(game[arr[j][2]-1]==1){
                     cnt++;
                 }
             }
