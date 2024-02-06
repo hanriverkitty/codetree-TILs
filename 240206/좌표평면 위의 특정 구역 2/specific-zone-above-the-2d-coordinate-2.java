@@ -26,7 +26,6 @@ public class Main {
                 }
                 
             }
-            System.out.println(x_max+" "+" "+x_min+" "+y_max+" "+y_min);
             ans = Math.min(ans,(int)(x_max-x_min)*(y_max-y_min));
         }
         System.out.println(ans);
