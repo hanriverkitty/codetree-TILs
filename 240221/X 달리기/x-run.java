@@ -14,7 +14,7 @@ public class Main {
             dist -= speed;
             time++;
 
-            if(leftDist == 0)
+            if(dist == 0)
                 break;
 
             
