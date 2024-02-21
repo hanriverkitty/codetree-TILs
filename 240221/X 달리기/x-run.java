@@ -9,7 +9,12 @@ public class Main {
             if(i*(i+1)-i>n){
                 continue;
             }
+            if((n-(i*(i+1)-i))/i>0){
+                int div = (n-(i*(i+1)-i))/i;
+                min = Math.min(n-(i*(i+1)-i+div*i)+2*i-1+div,min);
+            }else{
             min = Math.min(n-(i*(i+1)-i)+2*i-1,min);
+            }
         }
         System.out.println(min);
     }
