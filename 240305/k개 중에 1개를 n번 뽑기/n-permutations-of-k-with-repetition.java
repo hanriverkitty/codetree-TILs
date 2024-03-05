@@ -7,8 +7,9 @@ public class Main {
         if (b>=n){
             for(int i=0;i<arr.size();i++){
                 System.out.print(arr.get(i)+ " ");
-            System.out.println();
+            
             }
+            System.out.println();
             return;
         }
         for (int j=1;j<=k;j++){
