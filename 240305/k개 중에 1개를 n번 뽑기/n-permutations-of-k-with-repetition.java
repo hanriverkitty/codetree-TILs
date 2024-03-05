@@ -15,7 +15,7 @@ public class Main {
         else {
             b++;
             cal(a,b);
-                        }
+        }
 
     }
 
