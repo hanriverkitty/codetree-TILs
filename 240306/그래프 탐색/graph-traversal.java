@@ -28,6 +28,7 @@ public class Main {
             int a = sc.nextInt();
             int b = sc.nextInt();
             arr[a].add(b);
+            arr[b].add(a);
         }
         visited = new boolean[n+1];
         Arrays.fill(visited,false);
