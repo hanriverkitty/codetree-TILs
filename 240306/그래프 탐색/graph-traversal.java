@@ -30,8 +30,10 @@ public class Main {
             arr[a].add(b);
             arr[b].add(a);
         }
+        
         visited = new boolean[n+1];
         Arrays.fill(visited,false);
+        visited[1]=true;
         DFS(1);
         System.out.print(cnt);
     }
