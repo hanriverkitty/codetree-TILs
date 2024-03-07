@@ -13,7 +13,7 @@ public class Main {
         }
         arr[3]=1;
         for (int i=4;i<n+1;i++){
-            arr[i] = arr[i-2]+arr[i-3];
+            arr[i] = (arr[i-2]+arr[i-3])%10007;
         }
         System.out.println(arr[n]);
     }
