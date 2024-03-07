@@ -15,14 +15,14 @@ public class Main {
             Point now = q.poll();
             int x = now.x;
             int y = now.y;
-            for (int i=0;i<3;i++){
+            for (int i=0;i<4;i++){
                 int next_x = x+dx[i];
                 int next_y = y+dy[i];
                 if(next_x>=0 && next_y>=0 && next_x<n && next_y<m){
                     if(visited[next_x][next_y]==false && arr[next_x][next_y]==1){
                         dist[next_x][next_y] = dist[x][y]+1;
-                        q.add(new Point(next_x,next_y));
-                        visited[next_x][next_y]=true; 
+                        visited[next_x][next_y]=true;
+                        q.add(new Point(next_x,next_y)); 
                     }
                 }
             }
