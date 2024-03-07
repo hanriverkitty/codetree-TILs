@@ -23,7 +23,7 @@ public class Main {
             for (int i=0;i<4;i++){
                 int next_x  = x + dx[i];
                 int next_y = y +dy[i];
-                if(next_x>=0 && next_y>=0 && next_x<m && next_y<n){
+                if(next_x>=0 && next_y>=0 && next_x<n && next_y<m){
                     if(visited[next_x][next_y]==false && arr[next_x][next_y]==1){
                         q.add(new Point(next_x,next_y));
                         visited[next_x][next_y]=true;
