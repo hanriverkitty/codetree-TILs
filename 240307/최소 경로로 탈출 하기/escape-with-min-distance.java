@@ -51,9 +51,8 @@ public class Main {
         q.add(new Point(0,0));
         visited[0][0]=true;
         dist[0][0]=0;
-        bfs();
-        
-            System.out.println(dist[n-1][m-1]);
+        bfs();      
+        System.out.println(dist[n-1][m-1]);
       
     }
 }
