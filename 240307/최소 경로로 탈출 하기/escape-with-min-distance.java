@@ -42,12 +42,7 @@ public class Main {
                 arr[i][j] = sc.nextInt();
             }
         }
-        for (int[] a:dist){
-            Arrays.fill(a,-1);
-        }
-        for (boolean[] a:visited){
-            Arrays.fill(a,false);
-        }
+        
         q.add(new Point(0,0));
         visited[0][0]=true;
         dist[0][0]=0;
