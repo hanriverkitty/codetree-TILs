@@ -43,17 +43,17 @@ public class Main {
             }
         }
         for (int[] a:dist){
-            Arrays.fill(a,0);
+            Arrays.fill(a,-1);
         }
         for (boolean[] a:visited){
             Arrays.fill(a,false);
         }
         q.add(new Point(0,0));
         visited[0][0]=true;
+        dist[0][0]=0;
         bfs();
-        if(dist[n-1][m-1]!=0){
-            System.out.print(dist[n-1][m-1]);
-        }
-        else System.out.print(-1);
+        
+            System.out.println(dist[n-1][m-1]);
+      
     }
 }
