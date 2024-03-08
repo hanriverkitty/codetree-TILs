@@ -1,6 +1,6 @@
 import java.util.*;
 public class Main {
-    static int MAX = Integer.MAX_VALUE;
+    static int MAX = Integer.MAX_VALUE-2;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -10,7 +10,7 @@ public class Main {
             coins[i] = sc.nextInt();
         }
         int[] dp = new int[m+1];
-        Arrays.fill(dp,MAX);
+        Arrays.fill(dp,MAX);        
         dp[0] = 0;
         for(int i=1;i<m+1;i++){
             for(int j=0;j<n;j++){
@@ -19,7 +19,6 @@ public class Main {
                 }
             }
         }
-        
         if(dp[m]!=MAX){
             System.out.print(dp[m]);
         }else{
