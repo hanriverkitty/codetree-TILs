@@ -3,21 +3,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[n];
-        int[] dp = new int[n];
-        for (int i=0;i<n;i++){
+        int[] arr = new int[n+1];
+        int[] dp = new int[n+1];
+        for (int i=1;i<=n;i++){
             arr[i] = sc.nextInt();
         }
-        dp[0]=1;
-        for(int i=0;i<n;i++){
-            
+        Arrays.fill(dp,-13);
+        dp[0]=0;
+        for(int i=1;i<=n;i++){            
             for(int j=0;j<i;j++){
-                int temp;
-                if(arr[j]>=arr[i]){
-                    temp = dp[j];
+                if(dp[j]==-13) continue;
+                if(arr[j]<=arr[i]){
+                    dp[i] = Math.max(dp[i],dp[j]+1);
                 }
-                else temp = dp[j]+1;
-                dp[i] = Math.max(dp[i],temp);
+                
+                
             }
             
         }
