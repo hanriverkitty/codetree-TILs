@@ -10,8 +10,8 @@ public class Main {
         }
         if (a.length()<n){
             for (String str:arr){
-                a = a+str;
-                make(a);
+                String temp = a+str;
+                make(temp);
             }
         }
     }
@@ -22,6 +22,8 @@ public class Main {
         for (int i=0;i<4;i++){
             make(arr[i]);
         }
-        System.out.print(strings.size());
+
+            System.out.println(strings.size());
+
     }
 }
