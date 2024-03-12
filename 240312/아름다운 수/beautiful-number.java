@@ -1,49 +1,34 @@
-import java.util.Scanner;
-import java.util.ArrayList;
-
+import java.util.*;
 public class Main {
-    public static int n;
-    public static int ans;
-    public static ArrayList<Integer> seq = new ArrayList<>();
-    
-    public static boolean isBeautiful() {
-        // 연달아 같은 숫자가 나오는 시작 위치를 잡습니다.
-        for(int i = 0; i < n; i += seq.get(i)) {
-            // 만약 연속하여 해당 숫자만큼 나올 수 없다면
-            // 아름다운 수가 아닙니다.
-            if(i + seq.get(i) - 1 >= n)
-                return false;
-            // 연속하여 해당 숫자만큼 같은 숫자가 있는지 확인합니다.
-            // 하나라도 다른 숫자가 있다면
-            // 아름다운 수가 아닙니다.
-            for(int j = i; j < i + seq.get(i); j++)
-                if(seq.get(j) != seq.get(i))
-                    return false;
-        }
-        return true;
-    }
-    
-    public static void countBeautifulSeq(int cnt) {
-        if(cnt == n) {
-            if(isBeautiful())
-                ans++;
+    static String[] arr = new String[]{"1","22","333","4444"};
+    static ArrayList<String> strings = new ArrayList<>();
+    static int n;
+    public static void make(String a){
+        // 붙인 글자가 자릿수가 동일하다면 ArrayList에 추가
+        if (a.length()==n){
+            strings.add(a);
             return;
         }
-        
-        for(int i = 1; i <= 4; i++) {
-            seq.add(i);
-            countBeautifulSeq(cnt + 1);
-            seq.remove(seq.size() - 1);
+
+        // n보다 작다면 재귀로 새로운 글자 붙이기
+        if (a.length()<n){
+            for (String str:arr){
+                //다른 글자들을 붙여서 재귀호출
+                // a = a+str 을 할 경우 재귀에서 돌아왔을 때 a값이 변경되므로 temp를 매개변수로 전달
+                String temp = a+str;
+                make(temp);
+            }
         }
     }
-    
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
-        
-        countBeautifulSeq(0);
-        
-        System.out.print(ans);
+        for (int i=0;i<4;i++){
+            make(arr[i]);
+        }
+
+            System.out.println(strings.size());
+
     }
 }
