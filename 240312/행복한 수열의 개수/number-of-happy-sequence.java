@@ -19,6 +19,7 @@ public class Main {
             for(int j=0;j<n;j++){                
                 if (arr[i][j] != temp){
                     temp = arr[i][j];
+                    cnt=1;
                 }
                 else 
                     cnt++;                    
@@ -31,6 +32,7 @@ public class Main {
             for(int k=0;k<n;k++){                
                 if (arr[k][i] != temp1){
                     temp1 = arr[k][i];
+                    cnt1=1;
                 }
                 else 
                     cnt1++;                    
