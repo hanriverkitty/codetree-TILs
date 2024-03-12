@@ -20,9 +20,9 @@ public class Main {
                 if (arr[i][j] != temp){
                     temp = arr[i][j];
                 }
-                else if (arr[i][j]==temp){
+                else 
                     cnt++;                    
-                }
+                
                 if(cnt==m){
                     answer++;
                     break;
@@ -32,9 +32,9 @@ public class Main {
                 if (arr[k][i] != temp1){
                     temp1 = arr[k][i];
                 }
-                else if (arr[k][i]==temp1){
+                else 
                     cnt1++;                    
-                }
+                
                 if (cnt1==m){
                     answer++;
                     break;
