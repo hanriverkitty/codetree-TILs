@@ -2,8 +2,8 @@ import java.util.*;
 import java.awt.Point;
 public class Main {
     static int r1,c1,r2,c2;
-    static int[] dx = new int[]{2,2,1,1,-1,-1,2,-2};
-    static int[] dy = new int[]{1,-1,2,-2,2,-2,-1,1};
+    static int[] dx = new int[]{-2, -2, -1, -1,  1, 1,  2, 2};
+    static int[] dy = new int[]{-1,  1, -2,  2, -2, 2, -1, 1};
     static int[][] arr;
     static boolean[][] visited;
     static int n;
