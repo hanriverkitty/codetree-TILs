@@ -43,8 +43,8 @@ public class Main {
         for (int i=0;i<k;i++){
             int r = sc.nextInt();
             int c = sc.nextInt();
-            visited[r][c] = true;
             if(!visited[r][c]) answer++;
+            visited[r][c] = true;
             bfs(r,c);
         }
         System.out.print(answer);
