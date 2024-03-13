@@ -6,7 +6,7 @@ public class Main {
     static int[][] arr;
     static Queue<Point> q = new LinkedList<>();
     static boolean[][] visited;
-    static int answer=1;
+    static int answer=0;
     static int[] dx = new int[]{1,-1,0,0};
     static int[] dy = new int[]{0,0,1,-1};
 
@@ -22,8 +22,7 @@ public class Main {
                 if (new_x>=1 && new_y>=1 && new_x<=n && new_y<=n){
                     if(!visited[new_x][new_y] && arr[new_x][new_y]==0){
                         visited[new_x][new_y]=true;
-                        answer++;
-                     
+                        answer++;                     
                         q.add(new Point(new_x,new_y));
                     }
                 }
@@ -45,6 +44,7 @@ public class Main {
             int r = sc.nextInt();
             int c = sc.nextInt();
             visited[r][c] = true;
+            answer++;
             bfs(r,c);
         }
         System.out.print(answer);
