@@ -41,7 +41,7 @@ public class Main {
         visited[r1][c1]=true;
         q.add(new Point(r1,c1));        
         bfs();
-        if (arr[r2][c2]==0){
+        if (!visited[r2][c2]){
             System.out.print(-1);
         }
         else System.out.print(arr[r2][c2]);
