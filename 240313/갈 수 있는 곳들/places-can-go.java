@@ -44,7 +44,7 @@ public class Main {
             int r = sc.nextInt();
             int c = sc.nextInt();
             visited[r][c] = true;
-            answer++;
+            if(!visited[r][c]) answer++;
             bfs(r,c);
         }
         System.out.print(answer);
