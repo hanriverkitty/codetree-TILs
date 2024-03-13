@@ -23,7 +23,7 @@ public class Main {
                     if(!visited[new_x][new_y] && arr[new_x][new_y]==0){
                         visited[new_x][new_y]=true;
                         answer++;
-                        System.out.println(new_x+" "+new_y);
+                     
                         q.add(new Point(new_x,new_y));
                     }
                 }
