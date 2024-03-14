@@ -21,6 +21,9 @@ public class Main {
                 }
             }
         }
-        System.out.print(dp[m]);
+        if(dp[m]!=Integer.MAX_VALUE){
+            System.out.print(dp[m]);
+        }else System.out.print(-1);
+        
     }
 }
