@@ -25,7 +25,7 @@ public class Main {
         dp[1][1] = min;
         dp[1][2] = arr[0]+arr[1];
         dp[1][3] = min;
-        for (int i=3;i<n;i++){
+        for (int i=2;i<n;i++){
             for(int j=0;j<4;j++){
                 if (j==0){
                     dp[i][j] = dp[i-2][j]+arr[i];
