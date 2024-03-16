@@ -40,9 +40,9 @@ public class Main {
             }
         }
         if(n==4){
-           System.out.print(dp[3][2]);
+           System.out.println(dp[3][2]);
         }else{
-            System.out.print(dp[n-1][3]);      
+            System.out.println(Math.max(dp[n-1][3],dp[n-1][2]));      
         }
         
     }
