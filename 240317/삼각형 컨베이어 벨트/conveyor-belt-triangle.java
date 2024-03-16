@@ -14,6 +14,7 @@ public class Main {
         int cnt=0;
         for(int i=0;i<3*n;i++){
             System.out.print(dq.pollFirst()+" ");
+            cnt++;
             if (cnt==n){
                 System.out.println();
                 cnt=0;
