@@ -25,10 +25,6 @@ public class Main {
         dp[1][1] = min;
         dp[1][2] = arr[0]+arr[1];
         dp[1][3] = min;
-        dp[2][0] = min;
-        dp[2][1] = Math.max(arr[0]+arr[2],arr[1]+arr[2]);
-        dp[2][2] = min;
-        dp[2][3] = dp[1][2]+arr[2];
         for (int i=3;i<n;i++){
             for(int j=0;j<4;j++){
                 if (j==0){
@@ -39,11 +35,10 @@ public class Main {
                 }
             }
         }
-        if(n==4){
-           System.out.println(dp[3][2]);
-        }else{
-            System.out.println(Math.max(dp[n-1][3],dp[n-1][2]));      
-        }
+        int answer=0;
+       for(int i=0;i<4;i++){
+        answer = Math.max(answer,dp[n-1][i]);
+       }
         
     }
 }
