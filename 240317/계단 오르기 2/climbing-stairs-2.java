@@ -36,9 +36,9 @@ public class Main {
             }
         }
         int answer=0;
-       for(int i=0;i<4;i++){
+    for(int i=0;i<4;i++){
         answer = Math.max(answer,dp[n-1][i]);
-       }
-        
+    }
+    System.out.print(answer);   
     }
 }
