@@ -12,32 +12,32 @@ public class Main {
             }
         }
 
-        int[] dx = new int[]{0,1,0,-1};
-        int[] dy = new int[]{1,0,-1,0};
+        int[] dx = new int[]{1,-1,0,0};
+        int[] dy = new int[]{0,0,-1,1};
+
         int now_x = r-1;
         int now_y = c-1;
+        System.out.print(arr[now_x][now_y]+" ");
         while(true){
-            int max=0;
-            int max_x;
-            int max_y;
+            int cnt=0;
             for(int i=0;i<4;i++){
                 int x = now_x+dx[i];
-                int y = now_y+dy[i];
+                int y = now_y+dy[i];                
                 if(x>=0 && y>=0 && x<n && y<n){
                     if(arr[x][y]>arr[now_x][now_y]){
-                        max = Math.max(max,arr[x][y]);
-                        max_x=x;
-                        max_y=y;
+                        System.out.print(arr[x][y]+" ");
+                        now_x = x;
+                        now_y = y;
+                        cnt=0;
+                        break;
                     }
+                    else cnt++;
                 }
+                
             }
+            if (cnt!=0) break;
             
-            now_x = max_x;
-            now_y = max_y;
-            if(now_x>=0 && now_y>=0 && now_x<n && now_y<n){
-                System.out.print(max+" ");
-            }
-            else break;
+            
         }    
 
     }
