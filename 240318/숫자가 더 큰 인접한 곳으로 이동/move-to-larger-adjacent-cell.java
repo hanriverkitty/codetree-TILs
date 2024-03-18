@@ -20,7 +20,7 @@ public class Main {
         System.out.print(arr[now_x][now_y]+" ");
         int cnt=0;
         while(cnt==0){
-            cnt=0;
+
             for(int i=0;i<4;i++){
                 int x = now_x+dx[i];
                 int y = now_y+dy[i];                
