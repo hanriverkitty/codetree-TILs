@@ -5,6 +5,10 @@ public class Main {
         int n = sc.nextInt();
         int r = sc.nextInt();
         int c = sc.nextInt();
+        if (n==1){
+            System.out.print(1);
+            return;
+        }
         int[][] arr = new int[n][n];
         for (int i=0;i<n;i++){
             for(int j=0;j<n;j++){
@@ -20,7 +24,6 @@ public class Main {
         System.out.print(arr[now_x][now_y]+" ");
         int cnt=0;
         while(cnt==0){
-
             for(int i=0;i<4;i++){
                 int x = now_x+dx[i];
                 int y = now_y+dy[i];                
