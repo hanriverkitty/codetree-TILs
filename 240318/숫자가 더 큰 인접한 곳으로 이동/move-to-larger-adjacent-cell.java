@@ -18,8 +18,9 @@ public class Main {
         int now_x = r-1;
         int now_y = c-1;
         System.out.print(arr[now_x][now_y]+" ");
-        while(true){
-            int cnt=0;
+        int cnt=0;
+        while(cnt==0){
+            cnt=0;
             for(int i=0;i<4;i++){
                 int x = now_x+dx[i];
                 int y = now_y+dy[i];                
@@ -35,7 +36,6 @@ public class Main {
                 }
                 
             }
-            if (cnt!=0) break;
             
             
         }    
