@@ -12,7 +12,7 @@ public class Main {
             }
         }
 
-        int[] dx = new int[]{1,-1,0,0};
+        int[] dx = new int[]{-1,1,0,0};
         int[] dy = new int[]{0,0,-1,1};
 
         int now_x = r-1;
