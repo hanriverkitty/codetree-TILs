@@ -27,13 +27,12 @@ public class Main {
             }
         }
         
-        
         int[][] temp = new int[n][n];
         for(int i=0;i<n;i++){
             int idx=n-1;
             for(int j=n-1;j>=0;j--){
-                if(arr[i][j]!=0){
-                    temp[i][idx]=arr[i][j];
+                if(arr[j][i]!=0){
+                    temp[idx][i]=arr[j][i];
                     idx--;
                 }
             }
