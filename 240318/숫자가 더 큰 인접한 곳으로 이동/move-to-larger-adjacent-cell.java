@@ -5,6 +5,7 @@ public class Main {
         int n = sc.nextInt();
         int r = sc.nextInt();
         int c = sc.nextInt();
+        int[][] arr = new int[n][n];
         for (int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 arr[i][j] = sc.nextInt();
@@ -31,9 +32,9 @@ public class Main {
                 }
             }
             
-            now_x = x;
-            now_y = y;
-            if(x>=0 && y>=0 && x<n && y<n){
+            now_x = max_x;
+            now_y = max_y;
+            if(now_x>=0 && now_y>=0 && now_x<n && now_y<n){
                 System.out.print(max+" ");
             }
             else break;
