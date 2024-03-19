@@ -6,19 +6,26 @@ public class Main {
     static int[][] ball;
     static int[][] arr;
     public static void move(int x,int y){
+        int max_x=x;
+        int max_y=y;
+        int max = arr[x][y];
         for(int i=0;i<4;i++){
             int mx = x+dx[i];
             int my = y+dy[i];
             if(mx>=0 && my>=0 && mx<n && my<n){
-                if(arr[mx][my]>arr[x][y]){
-                    ball[mx][my]++;
-                    ball[x][y]--;
-                    break;
+                if(arr[mx][my]<max){                   
+                        max_x=mx;
+                        max_y=my;
+                        max=arr[mx][my];                    
                 }
             }
         }
-
+        ball[max_x][max_y]++;
+        ball[x][y]--;
+        
     }
+    
+    //
     public static void check_balls(){
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
