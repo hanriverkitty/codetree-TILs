@@ -16,7 +16,6 @@ public class Main {
                 continue;
             }
             toy[i] = toy[i]+arr[time];
-            System.out.println(toy[i]);
             go(time+1);
             toy[i] = toy[i]-arr[time];
         }
