@@ -79,7 +79,7 @@ public class Main {
             int y = bombPos.get(cnt).y;
             
             bombType[x][y] = i;
-            findMaxArea(cnt + 1);
+            findMaxArea(cnt+1);
             bombType[x][y] = 0;
         }
     }
