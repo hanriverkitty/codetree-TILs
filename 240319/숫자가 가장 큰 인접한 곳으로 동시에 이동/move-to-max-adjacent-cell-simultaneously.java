@@ -7,9 +7,9 @@ public class Main {
     static int[][] arr;
     static int[][] temp;
     public static void move(int x,int y,int[][] temp){
-        int max_x=x;
-        int max_y=y;
-        int max = arr[x][y];
+        int max_x;
+        int max_y;
+        int max=0;
         for(int i=0;i<4;i++){
             int mx = x+dx[i];
             int my = y+dy[i];
@@ -39,6 +39,7 @@ public class Main {
             }
         }
         ball=temp;
+        System.out.println(Arrays.deepToString(ball));
     }
 
     public static void main(String[] args) {
