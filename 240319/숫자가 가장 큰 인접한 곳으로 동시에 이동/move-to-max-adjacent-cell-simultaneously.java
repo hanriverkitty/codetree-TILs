@@ -5,6 +5,7 @@ public class Main {
     static int n;
     static int[][] ball;
     static int[][] arr;
+    static int[][] temp;
     public static void move(int x,int y,int[][] temp){
         int max_x=x;
         int max_y=y;
@@ -23,11 +24,12 @@ public class Main {
         temp[max_x][max_y]++;
         temp[x][y]--;
         
+        
     }
     
     //
     public static void check_balls(){
-        int[][] temp = new int[n][n];
+        temp = new int[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 if(ball[i][j]==1){
@@ -58,7 +60,7 @@ public class Main {
             check_balls();
         }
         
-        
+
         int answer=0;
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
