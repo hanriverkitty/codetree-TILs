@@ -23,7 +23,7 @@ public class Main {
         }
         temp[max_x][max_y]++;
         temp[x][y]--;
-        System.out.println(Arrays.deepToString(temp));          
+       
     }
     
     //
