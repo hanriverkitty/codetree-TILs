@@ -7,10 +7,13 @@ public class Main {
     public static int k;
     public static int m;
     public static void go(int time){
+        //말이 m을 넘어 계속 continue 됐을경우 종료조건에 안올 수 있다
         max = Math.max(max,calc()); 
         if(time==n){        
             return;
         }
+        
+        //말의 개 수 동안 전진, 이미 말이 도착점에 도달했을 경우 터치 X
         for(int i=0;i<k;i++){
             if(toy[i]>=m){
                 continue;
@@ -33,6 +36,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
+        //1번이 시작점이므로 -1
         m = sc.nextInt()-1;
         k = sc.nextInt();
         arr = new int[n];
