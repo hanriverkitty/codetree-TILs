@@ -12,7 +12,9 @@ public class Main {
             return;
         }
         for(int i=0;i<k;i++){
-            
+            if(toy[i]>=m){
+                continue;
+            }
             toy[i] = toy[i]+arr[time];
             go(time+1);
             toy[i] = toy[i]-arr[time];
