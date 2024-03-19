@@ -7,9 +7,8 @@ public class Main {
     public static int k;
     public static int m;
     public static void go(int time){
-        max = Math.max(max,calc());
-        if(time==n){
-            
+        max = Math.max(max,calc()); 
+        if(time==n){        
             return;
         }
         for(int i=0;i<k;i++){
@@ -17,6 +16,7 @@ public class Main {
                 continue;
             }
             toy[i] = toy[i]+arr[time];
+            System.out.println(toy[i]);
             go(time+1);
             toy[i] = toy[i]-arr[time];
         }
