@@ -5,7 +5,7 @@ public class Main {
     static int n;
     static int[][] ball;
     static int[][] arr;
-    public static void move(int x,int y){
+    public static void move(int x,int y,int[][] temp){
         int max_x=x;
         int max_y=y;
         int max = arr[x][y];
@@ -13,27 +13,30 @@ public class Main {
             int mx = x+dx[i];
             int my = y+dy[i];
             if(mx>=0 && my>=0 && mx<n && my<n){
-                if(arr[mx][my]<max){                   
+                if(arr[mx][my]>max){                   
                         max_x=mx;
                         max_y=my;
                         max=arr[mx][my];                    
                 }
             }
         }
-        ball[max_x][max_y]++;
-        ball[x][y]--;
+        temp[max_x][max_y]++;
+        temp[x][y]--;
         
     }
     
     //
     public static void check_balls(){
+        int[][] temp = new int[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 if(ball[i][j]==1){
-                    move(i,j);
+                    temp[i][j]=1;
+                    move(i,j,temp);
                 }else ball[i][j]=0;
             }
         }
+        ball=temp;
     }
 
     public static void main(String[] args) {
@@ -54,6 +57,8 @@ public class Main {
         for(int i=0;i<t;i++){
             check_balls();
         }
+        
+        
         int answer=0;
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
