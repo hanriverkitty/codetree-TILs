@@ -1,41 +1,32 @@
-import java.util.Scanner;
-
+import java.util.*;
 public class Main {
-    public static final int MAX_NUM = 20;
+    static List<Integer> num = new ArrayList<>();
+    static int n,m,max;
+    static int[] arr;
     
-    // 전역 변수 선언:
-    public static int n, m;
-    public static int[] A = new int[MAX_NUM];
-    
-    public static int ans;
-    
-    public static void findMaxXor(int currIdx, int cnt, int currVal) {
-        if(cnt == m) {
-            ans = Math.max(ans, currVal);
+    public static void back(int time,int idx,int val){
+        if(time==m){
+            max = Math.max(max,val);
             return;
         }
-    
-        if(currIdx == n) 
+        if(time>m){
             return;
-    
-        // currIdx index 에 있는 숫자를 선택하지 않은 경우
-        findMaxXor(currIdx + 1, cnt, currVal);
-        
-        // currIdx index 에 있는 숫자를 선택한 경우
-        findMaxXor(currIdx + 1, cnt + 1, currVal ^ A[currIdx]);
+        }
+        for(int i=idx;i<n;i++){            
+            back(time+1,i+1,val ^ arr[i]);            
+        }
+
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // 입력:
         n = sc.nextInt();
         m = sc.nextInt();
-        for(int i = 0; i < n; i++) 
-            A[i] = sc.nextInt();
-
-        findMaxXor(0, 0, 0);
-        
-        // 출력:
-        System.out.print(ans);
+        arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+        back(0,0,0);
+        System.out.println(max);
     }
 }
