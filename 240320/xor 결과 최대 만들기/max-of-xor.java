@@ -4,15 +4,15 @@ public class Main {
     static int n,m,max;
     static int[] arr;
     
-    public static void back(){
-        if(num.size()==m){
+    public static void back(int time){
+        if(time==m){
             max = Math.max(max,calc());
             return;
         }
         for(int i=0;i<n;i++){
             if(num.contains(arr[i])) continue;
             num.add(arr[i]);
-            back();
+            back(time+1);
             num.remove(num.size()-1);
         }
 
@@ -34,7 +34,7 @@ public class Main {
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-        back();
+        back(0);
         System.out.println(max);
     }
 }
