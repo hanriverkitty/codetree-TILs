@@ -4,14 +4,14 @@ public class Main {
     static int n,m,max;
     static int[] arr;
     
-    public static void back(int time,int idx){
+    public static void back(int time,int idx,int val){
         if(time==m){
-            max = Math.max(max,calc());
+            max = Math.max(max,val);
             return;
         }
         for(int i=idx;i<n;i++){
             num.add(arr[i]);
-            back(time+1,i);
+            back(time+1,i,val ^ arr[i]);
             num.remove(num.size()-1);
         }
 
@@ -33,7 +33,7 @@ public class Main {
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-        back(0,0);
+        back(0,0,0);
         System.out.println(max);
     }
 }
