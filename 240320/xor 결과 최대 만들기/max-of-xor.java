@@ -4,15 +4,14 @@ public class Main {
     static int n,m,max;
     static int[] arr;
     
-    public static void back(int time){
+    public static void back(int time,int idx){
         if(time==m){
             max = Math.max(max,calc());
             return;
         }
-        for(int i=0;i<n;i++){
-            if(num.contains(arr[i])) continue;
+        for(int i=idx;i<n;i++){
             num.add(arr[i]);
-            back(time+1);
+            back(time+1,i);
             num.remove(num.size()-1);
         }
 
