@@ -9,9 +9,7 @@ public class Main {
             max = Math.max(max,val);
             return;
         }
-        if(time>m){
-            return;
-        }
+        
         for(int i=idx;i<n;i++){            
             back(time+1,i+1,val ^ arr[i]);            
         }
