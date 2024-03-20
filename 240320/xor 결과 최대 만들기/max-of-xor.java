@@ -33,7 +33,7 @@ public class Main {
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-        back(0);
+        back(0,0);
         System.out.println(max);
     }
 }
