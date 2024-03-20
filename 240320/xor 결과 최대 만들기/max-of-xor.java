@@ -19,7 +19,7 @@ public class Main {
     }
     public static int calc(){
         int result=num.get(0);
-        for(int i=1;i<num.size();i++){
+        for(int i=1;i<m;i++){
             result = result ^ num.get(i);
         }
         return result;
