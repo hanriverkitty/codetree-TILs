@@ -10,6 +10,7 @@ public class Main {
             return;
         }
         
+        //idx 를 통해 중복되는 수를 피해 조합을 만들고, xor 결과 재귀에 전달
         for(int i=idx;i<n;i++){            
             back(time+1,i+1,val ^ arr[i]);            
         }
