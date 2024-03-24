@@ -35,7 +35,8 @@ public class Main {
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 if(arr[i][j]==1){
-                    cnt_p=0;
+                    cnt_p=1;
+                    arr[i][j]=0;
                     dfs(i,j);
                     cnt.add(cnt_p);
                 }
