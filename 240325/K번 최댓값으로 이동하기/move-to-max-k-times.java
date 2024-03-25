@@ -33,7 +33,7 @@ public class Main {
                             max = Math.max(max,arr[mx][my]); 
                             
                         }
-                        if(!visited[mx][my] && arr[mx][my]>arr[x][y]){
+                        if(arr[mx][my]>arr[x][y]){
                                 cnt++;
                             }
                     }
