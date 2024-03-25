@@ -44,20 +44,23 @@ public class Main {
                         }                        
                     }                
             }           
-        }        
+        }
+        int min_x = Integer.MAX_VALUE;
+        int min_y = Integer.MAX_VALUE;
         for(int i=0;i<n;i++){
-                if(answer_x<i){
+                if(min_x<i){
                     break;
                 }
                 for(int j=0;j<n;j++){
                     if(arr[i][j]==max && visited[i][j]){         
-                        answer_x=i;
-                        answer_y=j;
+                        min_x=i;
+                        min_y=j;
                         break;
                     }                                                   
                 }
             }
-        
+        answer_x = min_x;
+        answer_y = min_y;
                         
     }        
     
