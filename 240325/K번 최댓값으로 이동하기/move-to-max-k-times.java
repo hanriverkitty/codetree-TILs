@@ -32,8 +32,7 @@ public class Main {
         while(!q.isEmpty()){
             Point a = q.poll();
             int nx = a.x;
-            int ny = a.y;
-            
+            int ny = a.y;            
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
                 int my = ny+dy[i];                
@@ -45,23 +44,20 @@ public class Main {
                         }                        
                     }                
             }           
-        }
-        int min_x = Integer.MAX_VALUE;
-        int min_y = Integer.MAX_VALUE;
+        }        
         for(int i=0;i<n;i++){
-                if(min_x<i){
+                if(answer_x<i){
                     break;
                 }
                 for(int j=0;j<n;j++){
                     if(arr[i][j]==max && visited[i][j]){         
-                        min_x=i;
-                        min_y=j;
+                        answer_x=i;
+                        answer_y=j;
                         break;
                     }                                                   
                 }
             }
-        answer_x = min_x;
-        answer_y = min_y;
+        
                         
     }        
     
