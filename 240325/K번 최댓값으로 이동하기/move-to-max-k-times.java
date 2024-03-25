@@ -59,6 +59,7 @@ public class Main {
                     }                                                   
                 }
             }
+        System.out.println(min_x+" "+min_y);
         answer_x = min_x;
         answer_y = min_y;
                         
