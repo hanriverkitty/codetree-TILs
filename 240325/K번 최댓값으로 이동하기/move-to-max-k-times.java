@@ -22,7 +22,7 @@ public class Main {
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
                 int my = ny+dy[i];
-                else{
+                
                     if(mx>=0 && my>=0 && mx<n && my<n){
                         if(!visited[mx][my] && arr[mx][my]<arr[x][y]){
                             q.add(new Point(mx,my));
@@ -31,7 +31,7 @@ public class Main {
                             
                         }
                     }
-                }
+                
             }          
         }
         int min_x = Integer.MAX_VALUE;
