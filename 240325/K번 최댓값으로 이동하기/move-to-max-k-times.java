@@ -20,14 +20,14 @@ public class Main {
             int ny = a.y;
             int cnt=0;
             for(int i=0;i<4;i++){
-                int mx = x+dx[i];
-                int my = y+dy[i];
+                int mx = nx+dx[i];
+                int my = ny+dy[i];
                 if(mx<0 || my<0 || mx>=n || my>=n){
                     cnt++;
                 }
                 else{
                     if(mx>=0 && my>=0 && mx<n && my<n){
-                        if(!visited[mx][my] && arr[mx][my]<arr[nx][ny]){
+                        if(!visited[mx][my] && arr[mx][my]<arr[x][y]){
                             q.add(new Point(mx,my));
                             visited[mx][my] = true;
                             max = Math.max(max,arr[mx][my]); 
