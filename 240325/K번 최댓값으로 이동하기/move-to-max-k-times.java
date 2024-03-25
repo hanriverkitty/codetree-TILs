@@ -74,6 +74,6 @@ public class Main {
         for(int i=0;i<k;i++){
             bfs(answer_x,answer_y);
         }
-        System.out.println((answer_x+1)+" "+(answer_y+1));
+        System.out.println((answer_x)+" "+(answer_y));
     }
 }
