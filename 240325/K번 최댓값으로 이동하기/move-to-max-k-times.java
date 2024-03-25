@@ -36,18 +36,14 @@ public class Main {
             
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
-                int my = ny+dy[i];
-                
+                int my = ny+dy[i];                
                     if(mx>=0 && my>=0 && mx<n && my<n){
                         if(!visited[mx][my] && arr[mx][my]<arr[x][y]){
                             q.add(new Point(mx,my));
                             visited[mx][my] = true;
-                            max = Math.max(max,arr[mx][my]); 
-                            
-                        }
-                        
-                    }
-                
+                            max = Math.max(max,arr[mx][my]);                             
+                        }                        
+                    }                
             }           
         }
         int min_x = Integer.MAX_VALUE;
@@ -57,7 +53,7 @@ public class Main {
                     break;
                 }
                 for(int j=0;j<n;j++){
-                    if(arr[i][j]==max){         
+                    if(arr[i][j]==max && visited[i][j]){         
                         min_x=i;
                         min_y=j;
                         break;
