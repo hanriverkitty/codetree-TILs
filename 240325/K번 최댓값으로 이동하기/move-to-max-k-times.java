@@ -15,20 +15,22 @@ public class Main {
         visited[x][y]=true;
         int max=0;
         int cnt=0;
+
+        //범위 밖이거나 주위에 작은값이 없어 움직일 수 없는 경우
         for(int i=0;i<4;i++){
                 int mx = x+dx[i];
                 int my = y+dy[i];
                 if(mx<0 || my<0 || mx>=n || my>=n){
                     cnt++;
                 }
-                else{
-                    
-                        if(arr[mx][my]>=arr[x][y]){
-                                cnt++;
-                            }
-                    
+                else{                    
+                    if(arr[mx][my]>=arr[x][y]){
+                        cnt++;
+                    }                    
                 }
             }if (cnt==4) return;
+
+        //DFS
         while(!q.isEmpty()){
             Point a = q.poll();
             int nx = a.x;
@@ -45,6 +47,8 @@ public class Main {
                     }                
             }           
         }
+
+        //움직일 수 있는 가장 큰 값중에 행과 열이 가장 작은곳
         int min_x = Integer.MAX_VALUE;
         int min_y = Integer.MAX_VALUE;
         for(int i=0;i<n;i++){
@@ -59,9 +63,10 @@ public class Main {
                     }                                                   
                 }
             }
+
+        //시작점 업데이트    
         answer_x = min_x;
-        answer_y = min_y;
-                        
+        answer_y = min_y;                        
     }        
     
     public static void main(String[] args) {
