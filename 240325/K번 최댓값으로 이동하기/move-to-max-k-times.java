@@ -23,7 +23,7 @@ public class Main {
                 }
                 else{
                     
-                        if(arr[mx][my]>arr[x][y]){
+                        if(arr[mx][my]>=arr[x][y]){
                                 cnt++;
                             }
                     
