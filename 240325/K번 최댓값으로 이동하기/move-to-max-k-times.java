@@ -21,10 +21,11 @@ public class Main {
                     cnt++;
                 }
                 else{
-                    if(arr[mx][my]>arr[x][y]){
+                    
+                        if(arr[mx][my]>arr[x][y]){
                                 cnt++;
-                    }
-                    }
+                            }
+                    
                 }
             }if (cnt==4) return;
         while(!q.isEmpty()){
