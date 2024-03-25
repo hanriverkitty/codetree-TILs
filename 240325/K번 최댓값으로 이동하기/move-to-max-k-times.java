@@ -14,6 +14,19 @@ public class Main {
         q.add(new Point(x,y));
         visited[x][y]=true;
         int max=0;
+        for(int i=0;i<4;i++){
+                int mx = nx+dx[i];
+                int my = ny+dy[i];
+                if(mx<0 || my<0 || mx>=n || my>=n){
+                    cnt++;
+                }
+                else{
+                    if(arr[mx][my]>arr[x][y]){
+                                cnt++;
+                    }
+                    }
+                }
+            }if (cnt==4) return;
         while(!q.isEmpty()){
             Point a = q.poll();
             int nx = a.x;
@@ -22,7 +35,10 @@ public class Main {
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
                 int my = ny+dy[i];
-                
+                if(mx<0 || my<0 || mx>=n || my>=n){
+                    cnt++;
+                }
+                else{
                     if(mx>=0 && my>=0 && mx<n && my<n){
                         if(!visited[mx][my] && arr[mx][my]<arr[x][y]){
                             q.add(new Point(mx,my));
@@ -30,9 +46,12 @@ public class Main {
                             max = Math.max(max,arr[mx][my]); 
                             
                         }
+                        if(arr[mx][my]>arr[x][y]){
+                                cnt++;
+                            }
                     }
-                
-            }          
+                }
+            }if (cnt==4) return;           
         }
         int min_x = Integer.MAX_VALUE;
         int min_y = Integer.MAX_VALUE;
