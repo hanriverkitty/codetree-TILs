@@ -22,9 +22,6 @@ public class Main {
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
                 int my = ny+dy[i];
-                if(mx<0 || my<0 || mx>=n || my>=n){
-                    cnt++;
-                }
                 else{
                     if(mx>=0 && my>=0 && mx<n && my<n){
                         if(!visited[mx][my] && arr[mx][my]<arr[x][y]){
@@ -33,12 +30,9 @@ public class Main {
                             max = Math.max(max,arr[mx][my]); 
                             
                         }
-                        if(arr[mx][my]>arr[x][y]){
-                                cnt++;
-                            }
                     }
                 }
-            }if (cnt==4) return;           
+            }          
         }
         int min_x = Integer.MAX_VALUE;
         int min_y = Integer.MAX_VALUE;
