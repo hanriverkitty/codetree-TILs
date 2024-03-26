@@ -28,7 +28,7 @@ public class Main {
                         q.add(new Point(mx,my));
                         temp[mx][my]=temp[nx][ny]+1;
                     }
-                    if (arr[mx][my]==3){
+                    if (!visited[mx][my] && arr[mx][my]==3){
                         answer[x][y]=temp[nx][ny]+1;
                         return;
                     }
