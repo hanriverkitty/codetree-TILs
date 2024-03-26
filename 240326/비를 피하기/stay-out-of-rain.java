@@ -33,13 +33,7 @@ public class Main {
                         answer[x][y]=temp[nx][ny]+1;
                         return;
                     }
-                }else{
-                    move_cnt++;
                 }
-            }
-            if(move_cnt==4){
-                answer[x][y]=-1;
-                return;
             }
         }
         
