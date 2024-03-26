@@ -26,7 +26,7 @@ public class Main {
                         q.add(new Point(mx,my));
                         cnt++;
                     }
-                    if (arr[mx][my]==3){
+                    if (!visited[mx][my] && arr[mx][my]==3){
                         answer[x][y]=cnt;
                         return;
                     }
