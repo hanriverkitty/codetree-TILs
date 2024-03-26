@@ -16,7 +16,7 @@ public class Main {
             Point a = q.poll();
             int nx = a.x;
             int ny = a.y;
-            int move_cnt=0;
+            int move_cnt=1;
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
                 int my = ny+dy[i];
@@ -27,7 +27,6 @@ public class Main {
                         cnt++;
                     }
                     if (arr[mx][my]==3){
-                        cnt++;
                         answer[x][y]=cnt;
                         return;
                     }
