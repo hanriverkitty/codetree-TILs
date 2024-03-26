@@ -9,8 +9,7 @@ public class Main {
     public static int[] dx = new int[]{-1,1,0,0};
     public static int[] dy = new int[]{0,0,-1,1};
     public static void bfs(int x, int y){
-        int cnt=0;
-        
+        int cnt=0;       
         q.add(new Point(x,y));
         visited[x][y]=true;
         while(!q.isEmpty()){
@@ -40,7 +39,7 @@ public class Main {
                 return;
             }
         }
-        Arrays.fill(visited,false);
+        
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -59,6 +58,7 @@ public class Main {
             for(int j=0;j<n;j++){
                 if(arr[i][j]==2){
                     bfs(i,j);
+                    Arrays.fill(visited,false);
                 }
             }
         }
