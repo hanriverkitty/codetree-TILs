@@ -31,12 +31,14 @@ public class Main {
                     }
                     else if (visited[mx][my]==false && arr[mx][my]==3){
                         visited[mx][my]=true;
-                        answer[x][y]=temp[nx][ny]+1;
-                        System.out.println(Arrays.deepToString(answer));
+                        answer[x][y]=temp[nx][ny]+1;                        
                         return;
                     }
                 }
             }
+        }
+        if (answer[x][y]==0){
+            answer[x][y]=-1;
         }
         
         
@@ -61,12 +63,12 @@ public class Main {
                 }
             }
         }
-        // for(int i=0;i<n;i++){
-        //     for(int j=0;j<n;j++){
-        //         System.out.print(answer[i][j]+" ");
-        //     }
-        //     System.out.println();
-        // }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                System.out.print(answer[i][j]+" ");
+            }
+            System.out.println();
+        }
 
     }
 }
