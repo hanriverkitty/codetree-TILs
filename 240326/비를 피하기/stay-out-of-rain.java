@@ -4,6 +4,7 @@ public class Main {
     public static int[][] arr;
     public static boolean[][] visited;
     public static int[][] answer;
+    public static int[][] temp;
     public static int n;
     public static Queue<Point> q = new LinkedList<>();
     public static int[] dx = new int[]{-1,1,0,0};
@@ -12,6 +13,7 @@ public class Main {
         int cnt=0;       
         q.add(new Point(x,y));
         visited[x][y]=true;
+        temp = new int[n][n];
         while(!q.isEmpty()){
             Point a = q.poll();
             int nx = a.x;
@@ -24,11 +26,10 @@ public class Main {
                     if(!visited[mx][my] && (arr[mx][my]==2 || arr[mx][my]==0)){
                         visited[mx][my]=true;
                         q.add(new Point(mx,my));
-                        cnt++;
+                        temp[mx][my]=temp[nx][ny]+1;
                     }
                     if (arr[mx][my]==3){
-                        cnt++;
-                        answer[x][y]=cnt;
+                        answer[x][y]=temp[nx][ny]+1;
                         return;
                     }
                 }else{
