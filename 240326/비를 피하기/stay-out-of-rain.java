@@ -27,6 +27,7 @@ public class Main {
                         cnt++;
                     }
                     if (arr[mx][my]==3){
+                        cnt++;
                         answer[x][y]=cnt;
                         return;
                     }
