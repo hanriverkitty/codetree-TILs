@@ -58,7 +58,7 @@ public class Main {
             for(int j=0;j<n;j++){
                 if(arr[i][j]==2){
                     bfs(i,j);
-                    Arrays.fill(visited,false);
+                    visited = new boolean[n][n];
                 }
             }
         }
