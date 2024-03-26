@@ -14,11 +14,11 @@ public class Main {
         q.add(new Point(x,y));
         visited[x][y]=true;
         temp = new int[n][n];
+        visited = new boolean[n][n];
         while(!q.isEmpty()){
             Point a = q.poll();
             int nx = a.x;
             int ny = a.y;
-            int move_cnt=0;
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
                 int my = ny+dy[i];
@@ -55,7 +55,6 @@ public class Main {
             for(int j=0;j<n;j++){
                 if(arr[i][j]==2){
                     bfs(i,j);
-                    visited = new boolean[n][n];
                 }
             }
         }
