@@ -31,7 +31,7 @@ public class Main {
                     else if (!visited[mx][my] && arr[mx][my]==3){
                         visited[mx][my]=true;
                         answer[x][y]=temp[nx][ny]+1;
-                        arr[x][y]=0;
+                        arr[mx][my]=0;
                         return;
                     }
                 }
