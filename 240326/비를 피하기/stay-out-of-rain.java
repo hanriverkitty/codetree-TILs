@@ -10,7 +10,8 @@ public class Main {
     public static int[] dx = new int[]{-1,1,0,0};
     public static int[] dy = new int[]{0,0,-1,1};
     public static void bfs(int x, int y){
-        int cnt=0;       
+        int cnt=0;
+        q.clear();       
         q.add(new Point(x,y));
         visited[x][y]=true;
         temp = new int[n][n];
@@ -31,11 +32,13 @@ public class Main {
                     else if (visited[mx][my]==false && arr[mx][my]==3){
                         visited[mx][my]=true;
                         answer[x][y]=temp[nx][ny]+1;
+                        System.out.println(Arrays.deepToString(answer));
                         return;
                     }
                 }
             }
         }
+        
         
     }
     public static void main(String[] args) {
@@ -58,12 +61,12 @@ public class Main {
                 }
             }
         }
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                System.out.print(answer[i][j]+" ");
-            }
-            System.out.println();
-        }
+        // for(int i=0;i<n;i++){
+        //     for(int j=0;j<n;j++){
+        //         System.out.print(answer[i][j]+" ");
+        //     }
+        //     System.out.println();
+        // }
 
     }
 }
