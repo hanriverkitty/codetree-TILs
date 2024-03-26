@@ -21,7 +21,7 @@ public class Main {
                 int mx = nx+dx[i];
                 int my = ny+dy[i];
                 if(mx>=0 && my>=0 && mx<n && my<n){
-                    if(!visited[mx][my] && (arr[mx][my]==2 || arr[mx][my]==0){
+                    if(!visited[mx][my] && (arr[mx][my]==2 || arr[mx][my]==0)){
                         visited[mx][my]=true;
                         q.add(new Point(mx,my));
                         cnt++;
