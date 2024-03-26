@@ -19,7 +19,7 @@ public class Main {
             int move_cnt=0;
             for(int i=0;i<4;i++){
                 int mx = nx+dx[i];
-                int my  = ny+dy[i];
+                int my = ny+dy[i];
                 if(mx>=0 && my>=0 && mx<n && my<n){
                     if(!visited[mx][my] && arr[mx][my]!=1){
                         visited[mx][my]=true;
@@ -30,7 +30,7 @@ public class Main {
                         answer[x][y]=cnt;
                         return;
                     }
-                }else{
+                }else if(arr[mx][my]!=1){
                     move_cnt++;
                 }
             }
