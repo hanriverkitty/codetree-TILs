@@ -23,12 +23,12 @@ public class Main {
                 int mx = nx+dx[i];
                 int my = ny+dy[i];
                 if(mx>=0 && my>=0 && mx<n && my<n){
-                    if(!visited[mx][my] && (arr[mx][my]==2 || arr[mx][my]==0)){
+                    if(visited[mx][my]==false && (arr[mx][my]==2 || arr[mx][my]==0)){
                         visited[mx][my]=true;
                         q.add(new Point(mx,my));
                         temp[mx][my]=temp[nx][ny]+1;
                     }
-                    else if (!visited[mx][my] && arr[mx][my]==3){
+                    else if (visited[mx][my]==false && arr[mx][my]==3){
                         visited[mx][my]=true;
                         answer[x][y]=temp[nx][ny]+1;
                         return;
