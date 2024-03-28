@@ -14,8 +14,6 @@ public class Main {
                 comb.add(arr.get(i));
                 search(time+1,next+1);
                 comb.remove(comb.size()-1);
-            }else{
-                search(time+1,next+1);
             }
         }
     }
