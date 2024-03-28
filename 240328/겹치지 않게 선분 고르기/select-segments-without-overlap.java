@@ -19,7 +19,7 @@ public class Main {
     }
     public static boolean duplicate(Point point){
         for(int i=0;i<comb.size();i++){
-            if(!(comb.get(i).y<point.x)) return false;
+            if(comb.get(i).y<=point.y || comb.get(i).x>=point.x) return false;
         }
         return true;
     }
