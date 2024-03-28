@@ -7,7 +7,7 @@ public class Main {
     public static ArrayList<Point> comb = new ArrayList<>();
     public static void search(int time,int next){
         if(time==n){
-            max = Math.max(max,comb.size());
+            max = Math.max(max,comb.size()-1);
         }
         for(int i=next;i<n;i++){
             if (duplicate(arr.get(i))){
