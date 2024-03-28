@@ -15,7 +15,7 @@ public class Main {
                 search(time+1,next+1);
                 comb.remove(comb.size()-1);
             }else{
-            search(time+1,next+1);
+            return;
             }
         }
     }
