@@ -3,26 +3,31 @@ import java.awt.Point;
 public class Main {
     public static int n;
     public static ArrayList<Point> arr = new ArrayList<>();
-    public static int max=1;
+    public static int max=0;
     public static ArrayList<Point> comb = new ArrayList<>();
-    public static void search(int time,int next){
+    public static void search(int time){
         if(time==n){
-            max = Math.max(max,comb.size()-1);
+            if(duplicate()){
+                max = Math.max(max,comb.size());
+            }
             return;
         }
         if(n-time+comb.size()<max) return;
-        for(int i=next;i<n;i++){
-            if (duplicate(arr.get(i))){
-                comb.add(arr.get(i));
-                search(time+1,next+1);
-                comb.remove(comb.size()-1);
-            }
-            search(time+1,next+1);
-        }
+
+       
+        comb.add(arr.get(time));
+        search(time+1);
+        comb.remove(comb.size()-1);
+    
+        search(time+1);
+        
     }
-    public static boolean duplicate(Point point){
-        for(int i=1;i<comb.size();i++){
-            if(!(comb.get(i).y<point.x)) return false;
+    public static boolean duplicate(){
+        for(int i=0;i<comb.size();i++){
+            for (int j=i+1;j<comb.size();j++){
+                if(!(comb.get(i).y<comb.get(j).x)) return false;
+            }
+            
         }
         return true;
     }
@@ -30,7 +35,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
-        comb.add(new Point(0,0));
         for (int i=0;i<n;i++){
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
@@ -43,7 +47,7 @@ public class Main {
 		return Integer.compare(s1.x, s2.x);
         }
         });
-        search(0,0);
+        search(0);
         System.out.println(max);
     }
 }
