@@ -3,7 +3,7 @@ import java.awt.Point;
 public class Main {
     public static int n;
     public static ArrayList<Point> arr = new ArrayList<>();
-    public static int max=1;
+    public static int max=0;
     public static ArrayList<Point> comb = new ArrayList<>();
     public static void search(int time,int next){
         if(time==n){
