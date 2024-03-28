@@ -18,7 +18,7 @@ public class Main {
         }
     }
     public static boolean duplicate(Point point){
-        for(int i=0;i<comb.size();i++){
+        for(int i=0;i<comb.size()-1;i++){
             if(!(comb.get(i).y<point.x)) return false;
         }
         return true;
