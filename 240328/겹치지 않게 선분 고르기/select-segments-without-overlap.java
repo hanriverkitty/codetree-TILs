@@ -35,12 +35,12 @@ public class Main {
             arr.add(new Point(x1,x2));
         }
         // 정렬
-        // Collections.sort(arr, new Comparator<Point>(){
-		// @Override
-		// public int compare(Point s1, Point s2){
-		// return Integer.compare(s1.x, s2.x);
-        // }
-        // });
+        Collections.sort(arr, new Comparator<Point>(){
+		@Override
+		public int compare(Point s1, Point s2){
+		return Integer.compare(s1.x, s2.x);
+        }
+        });
         search(0,0);
         System.out.println(max);
     }
