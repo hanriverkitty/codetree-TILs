@@ -8,6 +8,7 @@ public class Main {
     public static void search(int time,int next){
         if(time==n){
             max = Math.max(max,comb.size()-1);
+            return;
         }
         if(n-time+comb.size()<max) return;
         for(int i=next;i<n;i++){
