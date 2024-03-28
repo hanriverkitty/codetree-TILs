@@ -16,6 +16,7 @@ public class Main {
                 comb.remove(comb.size()-1);
             }
             search(time+1,next+1);
+            comb.remove(comb.size()-1);
         }
     }
     public static boolean duplicate(Point point){
