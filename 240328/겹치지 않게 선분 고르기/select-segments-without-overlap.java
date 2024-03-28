@@ -9,12 +9,14 @@ public class Main {
         if(time==n){
             max = Math.max(max,comb.size()-1);
         }
+        if(n-time+comb.size()<max) return;
         for(int i=next;i<n;i++){
             if (duplicate(arr.get(i))){
                 comb.add(arr.get(i));
                 search(time+1,next+1);
                 comb.remove(comb.size()-1);
             }
+            search(time+1,next+1);
         }
     }
     public static boolean duplicate(Point point){
