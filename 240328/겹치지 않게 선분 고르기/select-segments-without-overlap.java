@@ -7,7 +7,7 @@ public class Main {
     public static ArrayList<Point> comb = new ArrayList<>();
     public static void search(int time,int next){
         if(time==n){
-            max = Math.max(max,comb.size());
+            max = Math.max(max,comb.size()-1);
         }
         for(int i=next;i<n;i++){
             if (duplicate(arr.get(i))){
@@ -19,7 +19,7 @@ public class Main {
     }
     public static boolean duplicate(Point point){
         for(int i=0;i<comb.size();i++){
-            if(comb.get(i).y<=point.y || comb.get(i).x>=point.x) return false;
+            if(!(comb.get(i).y<point.x)) return false;
         }
         return true;
     }
@@ -27,7 +27,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
-        
+        comb.add(new Point(0,0));
         for (int i=0;i<n;i++){
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
