@@ -3,11 +3,11 @@ import java.awt.Point;
 public class Main {
     public static int n;
     public static ArrayList<Point> arr = new ArrayList<>();
-    public static int max=1;
+    public static int max=0;
     public static ArrayList<Point> comb = new ArrayList<>();
     public static void search(int time,int next){
         if(time==n){
-            max = Math.max(max,comb.size()-1);
+            max = Math.max(max,comb.size());
         }
         for(int i=next;i<n;i++){
             if (duplicate(arr.get(i))){
@@ -15,7 +15,7 @@ public class Main {
                 search(time+1,next+1);
                 comb.remove(comb.size()-1);
             }else{
-            return;
+                search(time+1,next+1);
             }
         }
     }
@@ -29,7 +29,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
-        comb.add(new Point(-1,-1));
+        
         for (int i=0;i<n;i++){
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
