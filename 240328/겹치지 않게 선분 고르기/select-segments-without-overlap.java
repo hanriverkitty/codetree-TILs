@@ -33,12 +33,12 @@ public class Main {
             int x2 = sc.nextInt();
             arr.add(new Point(x1,x2));
         }
-        Collections.sort(arr, new Comparator<Point>(){
-		@Override
-		public int compare(Point s1, Point s2){
-		return Integer.compare(s1.x, s2.x);
-        }
-        });
+        // Collections.sort(arr, new Comparator<Point>(){
+		// @Override
+		// public int compare(Point s1, Point s2){
+		// return Integer.compare(s1.x, s2.x);
+        // }
+        // });
         search(0,0);
         System.out.println(max);
     }
