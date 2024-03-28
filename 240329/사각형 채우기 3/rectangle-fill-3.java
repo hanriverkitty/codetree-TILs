@@ -9,7 +9,7 @@ public class Main {
         arr[1] = 7;
         }
         for(int i=2;i<n;i++){
-            arr[i] = (2*arr[i-1] + 7*arr[i-2])%1000000007;
+            arr[i] = (2*arr[i-1] + 3*arr[i-2])%1000000007;
         }
         System.out.println(arr[n-1]);
     }
