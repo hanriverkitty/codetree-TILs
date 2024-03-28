@@ -29,6 +29,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
+        comb.add(new Point(-1,-1));
         for (int i=0;i<n;i++){
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
