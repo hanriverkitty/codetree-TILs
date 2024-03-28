@@ -14,9 +14,9 @@ public class Main {
                 comb.add(arr.get(i));
                 search(time+1,next+1);
                 comb.remove(comb.size()-1);
-            }
+            }else{
             search(time+1,next+1);
-            comb.remove(comb.size()-1);
+            }
         }
     }
     public static boolean duplicate(Point point){
@@ -34,6 +34,7 @@ public class Main {
             int x2 = sc.nextInt();
             arr.add(new Point(x1,x2));
         }
+        // 정렬
         // Collections.sort(arr, new Comparator<Point>(){
 		// @Override
 		// public int compare(Point s1, Point s2){
