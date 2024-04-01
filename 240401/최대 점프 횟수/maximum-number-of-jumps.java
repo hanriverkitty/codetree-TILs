@@ -11,8 +11,8 @@ public class Main {
         dp[0]=1;
         for (int i=1;i<n;i++){
             int max = 0;
-            for(int j=i-1;j>=0;j--){
-                if(arr[j]-i>=0){
+            for(int j=i-1;j=>0;j--){
+                if(arr[j]-(i-j)>=0){
                     max = Math.max(dp[j]+1,max);
                 }
             }
