@@ -8,10 +8,12 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         int[] dp = new int [n];
-        dp[0]=1;
-        for (int i=1;i<n;i++){
+        dp[0]=0;
+    
+        for (int i=1;i<n;i++){           
             int max = 0;
-            for(int j=i-1;j=>0;j--){
+            for(int j=i-1;j>=0;j--){
+                if(arr[i]==0) continue;
                 if(arr[j]-(i-j)>=0){
                     max = Math.max(dp[j]+1,max);
                 }
