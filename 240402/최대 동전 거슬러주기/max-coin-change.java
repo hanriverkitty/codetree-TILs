@@ -13,9 +13,7 @@ public class Main {
         dp[0]=0;
         for(int i=1;i<m+1;i++){
             for(int j=0;j<n;j++){
-                if(i-coins[j]>=0){
-                    dp[i] = Math.max(dp[i-coins[j]]+1,dp[i]);
-                }
+                dp[i] = Math.max(dp[i-coins[j]]+1,dp[i]);
             }
         }
         System.out.print(dp[m]>0 ? dp[m] : -1);
