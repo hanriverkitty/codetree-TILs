@@ -8,23 +8,23 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         int[] dp = new int [n];
-        dp[0]=0;
+        dp[0]=1;
+        for(int i=arr[0];i>0;i--){
+            dp[i]++;
+        }
     
-        for (int i=1;i<n;i++){           
+        for (int i=arr[0]+1;i<n;i++){           
             int max = 0;
             boolean can = false;
             for(int j=i-1;j>=0;j--){
-                if(arr[j]>0 && dp[j]==0){
-                    max=0;
-                }
-                if(arr[j]-(i-j)>=0 && arr[j]>0){
+                if(arr[j]-(i-j)>=0 && dp[j]>0){
                     max = Math.max(dp[j]+1,max);
                 }
             }
             dp[i] = max;
             
         }
-        
+        System.out.println(Arrays.toString(dp));
         System.out.println(Arrays.stream(dp).max().getAsInt());
     }
 }
