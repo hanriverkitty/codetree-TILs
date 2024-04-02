@@ -13,9 +13,9 @@ public class Main {
         Arrays.fill(dp,Integer.MIN_VALUE);
         dp[0]=0;
         for(int i=1;i<m+1;i++){
-            for(int j=0;j<n;j++){
-                if(dp[i]==Integer.MIN_VALUE) continue;
+            for(int j=0;j<n;j++){               
                 if(i-coins[j]>=0){
+                    if(dp[i-coins[j]]==Integer.MIN_VALUE) continue;
                     dp[i] = Math.max(dp[i-coins[j]]+1,dp[i]);
                 }
             }
