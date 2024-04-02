@@ -12,18 +12,17 @@ public class Main {
         for(int i=arr[0];i>0;i--){
             dp[i]++;
         }
-        
         for (int i=1;i<n;i++){           
             int max = dp[i];
             for(int j=i-1;j>0;j--){
-                if(arr[j]-(i-j)>0 && dp[j]>0){
+                if(arr[j]-(i-j)>=0 && dp[j]>0){
                     max = Math.max(dp[j]+1,max);
+                    dp[i] = max;
                 }
             }
-            dp[i] = max;
+            
             
         }
-        
         System.out.println(Arrays.stream(dp).max().getAsInt());
     }
 }
