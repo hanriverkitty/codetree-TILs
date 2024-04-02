@@ -17,10 +17,10 @@ public class Main {
             for(int j=i-1;j>0;j--){
                 if(arr[j]-(i-j)>=0 && dp[j]>0){
                     max = Math.max(dp[j]+1,max);
-                    dp[i] = max;
+                    
                 }
             }
-            
+            dp[i] = max;
             
         }
         System.out.println(Arrays.stream(dp).max().getAsInt());
