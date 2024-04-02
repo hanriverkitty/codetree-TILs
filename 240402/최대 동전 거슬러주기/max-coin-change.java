@@ -18,6 +18,6 @@ public class Main {
                 }
             }
         }
-        System.out.print(dp[m]);
+        System.out.print(dp[m]>0 ? dp[m] : -1);
     }
 }
